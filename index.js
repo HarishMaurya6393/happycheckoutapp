@@ -53,3 +53,32 @@ app.get('/auth/callback',async(req,res)=>{
 app.listen(port,()=>{
     console.log(`server running at http://${host}:${port}/`);
 });
+
+
+
+
+
+shopifyAccessToken(input: shopifyAccessTokenInput) : shopifyAccessTokenResponse
+
+
+input shopifyAccessTokenInput {
+    shop: String
+    code: String
+}
+
+type shopifyAccessTokenResponse {
+  access_token: String,
+  scope: String
+}
+
+const { RESTDataSource } = require('apollo-datasource-rest');
+
+shopifyAccessToken = (args, datasource) => {
+    const { shop = "", code = "" } = args.input;
+    const result = RESTDataSource.post(`https://${shop}.myshopify.com/admin/oauth/access_token`, {
+      client_id: env,
+      client_secret: env,
+      code,
+    });
+    return result;
+}   
