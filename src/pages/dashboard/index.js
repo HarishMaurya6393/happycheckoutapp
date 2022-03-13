@@ -11,18 +11,18 @@ const Dashboard = () => {
   const code = searchParams.get("code");
   console.log(code);
 
-  useEffect(() => {
-    const { data } = axios({
-      method: "POST",
-      url: `https://${shop}/admin/oauth/access_token`,
-      data: {
-        client_id: apiKey,
-        client_secret: apiSecretKey,
-        code,
-      },
-    });
+  // useEffect(() => {
+  //   const { data } = axios({
+  //     method: "POST",
+  //     url: `https://${shop}/admin/oauth/access_token`,
+  //     data: {
+  //       client_id: apiKey,
+  //       client_secret: apiSecretKey,
+  //       code,
+  //     },
+  //   });
 
-    console.log("res data => ", data);
+  //   console.log("res data => ", data);
 
 //         const shopify = new Shopify({
 //             shopName: shop,
@@ -31,7 +31,7 @@ const Dashboard = () => {
 //           });
 //     }, []);
 //     return <h1> Dashboard ! </h1>;
- });
+//  });
  };
 
 export default Dashboard;
