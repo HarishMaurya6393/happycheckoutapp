@@ -10,6 +10,7 @@ const Dashboard = () => {
   const shop = searchParams.get("shop");
   const code = searchParams.get("code");
   console.log(code);
+  console.log(shop);
 
   // useEffect(() => {
   //   const { data } = axios({
@@ -32,6 +33,9 @@ const Dashboard = () => {
 //     }, []);
 //     return <h1> Dashboard ! </h1>;
 //  });
+
+
+  <h1>Login Page.....</h1>
  };
 
 export default Dashboard;
