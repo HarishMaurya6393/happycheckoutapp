@@ -1,0 +1,29 @@
+.Polaris-Button{
+    background-color: black !important;
+    color: white !important;
+    border-radius: 5px;
+}
+/* body{
+    background-color: rgb(185 185 238) !important;
+} */
+
+.Polaris-DisplayText {
+    font-size: 2.2rem !important;
+}
+.main_div{
+    display: flex !important;
+}
+.Polaris-Thumbnail--sizeMedium {
+    width: inherit;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.bg{width: 100%; overflow: hidden;}
+.bg img{width: 100%;height: 100vh;}
