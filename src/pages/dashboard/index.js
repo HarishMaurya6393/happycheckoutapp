@@ -12,7 +12,7 @@ const Dashboard = () => {
   const code = searchParams.get("code");
   // console.log(code);
   console.log(shop);
-
+  <h3>Hello</h3> 
   const AUTH_TOKEN = gql`
     mutation shopifyAccessToken($input: shopifyAccessTokenInput) {
       shopifyAccessToken(input: $input) {
@@ -21,7 +21,7 @@ const Dashboard = () => {
       }
     }
  ` ;
-  const [shopifyAccessToken, { error, loading }] = useMutation(AUTH_TOKEN);
+  const [shopifyAccessToken, {data, error, loading }] = useMutation(AUTH_TOKEN);
   const setUrl = (url) => {
     window.top.location = url;
     }
@@ -46,8 +46,9 @@ const Dashboard = () => {
   }, [code, shop, shopifyAccessToken]);
 
   if (loading) return <h2>Loading....</h2>;
-
+  if (data) return <h2>hello </h2>;
   <h1>Login Page.....</h1>;
+  return ( <h3>hello world</h3>)
   return true;
 };
 
