@@ -11,7 +11,7 @@ const Dashboard = () => {
   const shop = searchParams.get("shop");
   const code = searchParams.get("code");
   // console.log(code);
-  console.log(shop);
+  // console.log(shop);
   <h3>Hello</h3> 
   const AUTH_TOKEN = gql`
     mutation shopifyAccessToken($input: shopifyAccessTokenInput) {
@@ -26,7 +26,7 @@ const Dashboard = () => {
     window.top.location = url;
     }
   useEffect(() => {
-    console.log("hellllooooooo")
+    // console.log("hellllooooooo")
     const shopifyAccessTokenInput = {
       shop,
       code,
